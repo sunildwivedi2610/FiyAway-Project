@@ -39,7 +39,14 @@ ResultSet resultset = null;
 	%><div>
 		<h2 align="center">Home</h2>
 		<p align="right">
-			<span><strong>LoggedIn as : <%=Login.email%></strong></span>
+			<span><strong>LoggedIn as : <%=Login.email%></strong></span> <br>
+		<div align="right">
+			<form method="post" action="/FlyAway/change-password.jsp">
+				<button type="submit" class="btn btn-success mb-2 btn-block">Change
+					Password</button>
+			</form>
+			&ensp;
+		</div>
 		</p>
 		<br>
 		<div align="center">
@@ -75,8 +82,6 @@ ResultSet resultset = null;
 									<td><%=resultset.getString("ticket_price")%></td>
 								</tr>
 								<%
-								p
-
 								}
 								} catch (Exception e) {
 								e.printStackTrace();

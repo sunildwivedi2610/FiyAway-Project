@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import entity.Search;
 
-
 public class SearchServlet extends HttpServlet {
 
 	@Override
@@ -21,10 +20,9 @@ public class SearchServlet extends HttpServlet {
 		Search.source = req.getParameter("source");
 		Search.destination = req.getParameter("destination");
 		Search.persons = Integer.parseInt(req.getParameter("persons"));
-		if(Search.date.equals("")) {
+		if (Search.date.equals("")) {
 			PrintWriter out = resp.getWriter();
-		}
-		else {
+		} else {
 			Search.day = getDay(Search.date);
 			resp.sendRedirect("/FlyAway/search-result.jsp");
 		}
@@ -34,5 +32,5 @@ public class SearchServlet extends HttpServlet {
 		LocalDate dt = LocalDate.parse(dateInp);
 		return dt.getDayOfWeek().toString();
 	}
-	
+
 }

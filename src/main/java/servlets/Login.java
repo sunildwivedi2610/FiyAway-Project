@@ -12,24 +12,22 @@ public class Login extends HttpServlet {
 	public static boolean isLoggedIn = false;
 	public static String password = "Admin";
 	public static String email = "admin@faairline.com";
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		PrintWriter out = resp.getWriter();
 		String email = req.getParameter("email");
 		String pass = req.getParameter("password");
-		
-		if(email.equals(Login.email)&& pass.equals(Login.password)) 
-		{
+
+		if (email.equals(Login.email) && pass.equals(Login.password)) {
 			isLoggedIn = true;
 			out.println("Welcome to FlyAway...");
 			resp.sendRedirect("/FlyAway/admin-home.jsp");
-		}
-		else {
+		} else {
 			isLoggedIn = false;
 			out.print("You have enterd wrong email or password.");
 		}
 		out.close();
 	}
-	
-	
+
 }
