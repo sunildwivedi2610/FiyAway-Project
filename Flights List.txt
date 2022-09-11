@@ -1,0 +1,8 @@
+flight_id	    name		source	destination	days		ticket_price
+-------------------------------------------------------------------------------
+1.		FlyAway-1F 7984	Bengaluru	New Delhi	Monday	7990
+2.		FlyAway-2F 7983	New Delhi	Bengaluru	Monday	7990
+3.		FlyAway-3F 6825	New Delhi	Bhopal	Tuesday	6850
+4.		FlyAway-4F 6824	Bhopal	New Delhi	Wednesday	6850
+5.		FlyAway-5F 5683	Bhopal	Bengluru	Friday	5628
+6.		FlyAway-1F 7984	Bengluru	Bhopal	Sunday	5628
